@@ -24,7 +24,8 @@ if __name__ == "__main__":
 
     db_path=args.wiki_db_path
     db_title_path=db_path.replace(".db", "-title.db")
-    db = DocDB(db_path=db_path)
+    db_data_path=db_path.replace(".db", ".jsonl")        
+    db = DocDB(db_path=db_path, data_path=db_data_path)
 
     # Step 1: Get all titles
     titles = get_titles_all(db)
